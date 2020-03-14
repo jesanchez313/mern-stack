@@ -1,0 +1,21 @@
+version: "3"
+services:
+  web:
+    container_name: mern-web
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/opt/app
+      - /opt/app/node_modules
+  db:
+    container_name: mern-db
+    image: mongo
+    expose:
+      - "27017"
+    volumes:
+      - mongodata:/data/db
+volumes:
+  mongodata:
