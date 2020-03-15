@@ -35,12 +35,23 @@ const Home: React.FC = () => {
     <>
       <h1>test de prueba</h1>
       <div>
-        {profiles && profiles.map((profile: any) => <h2>{profile.name}</h2>)}
+        {profiles &&
+          profiles.map((profile: any) => (
+            <>
+              <h2>{profile.name}</h2>
+              <br></br>
+              <img src={profile.picture}></img>
+            </>
+          ))}
       </div>
       <button onClick={() => handleCreate()}>agregar</button>
       <Link to="/create">
         <a>Ir a crear</a>
       </Link>
+      <br></br>
+      <a href="auth/github">github</a>
+      <br></br>
+      <a href="auth/logout?returnTo=/">logout</a>
     </>
   );
 };

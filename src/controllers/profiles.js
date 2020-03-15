@@ -14,11 +14,12 @@ profileController.get = async (req, res) => {
 
 profileController.create = async (req, res) => {
   const { name, description, picture } = req.body;
+  const { filename } = req.file;
 
   const newProfile = new ProfileModel({
     name,
     description,
-    picture
+    picture: filename
   });
 
   try {

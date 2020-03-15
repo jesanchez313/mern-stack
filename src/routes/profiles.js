@@ -1,7 +1,7 @@
 const { Router } = require("express");
-const router = Router();
-
 const { get, create, update, remove } = require("../controllers/profiles");
+
+const router = Router();
 
 router
   .route("/")
