@@ -11,6 +11,6 @@ RUN yarn global add nodemon --quiet
 
 COPY . .
 
-EXPOSE 8000
+EXPOSE 80
 
-CMD nodemon -L --watch . src/server.js
+CMD nodemon -L --watch . server.js

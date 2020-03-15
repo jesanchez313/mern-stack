@@ -4,9 +4,9 @@ const profileController = {};
 
 profileController.get = async (req, res) => {
   try {
-    const response = await ProfileModel.find();
+    // const response = await ProfileModel.find();
 
-    res.status(200).json(response);
+    res.status(200).json({ message: "get works" });
   } catch (error) {
     handleError(res, error.message, "error to get profile");
   }
