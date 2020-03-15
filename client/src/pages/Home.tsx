@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   const [profiles, setProfiles] = useState([]);
@@ -37,6 +38,9 @@ const Home: React.FC = () => {
         {profiles && profiles.map((profile: any) => <h2>{profile.name}</h2>)}
       </div>
       <button onClick={() => handleCreate()}>agregar</button>
+      <Link to="/create">
+        <a>Ir a crear</a>
+      </Link>
     </>
   );
 };
