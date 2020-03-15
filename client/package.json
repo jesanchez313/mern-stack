@@ -1,6 +1,5 @@
 {
   "name": "jeferson-sanchez-mern",
-  "proxy": "http://0.0.0.0:8000",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
