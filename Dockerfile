@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD nodemon -L --watch . src/index.js
+CMD nodemon -L --watch . src/server.js
