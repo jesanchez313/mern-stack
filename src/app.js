@@ -13,5 +13,8 @@ app.use(express.static(__dirname + "/../client/build"));
 
 //routes
 app.use("/api/profiles", require("./routes/profiles"));
+app.get((req, res) => {
+  res.sendFile(__dirname + "/../client/build/index.html");
+});
 
 module.exports = app;
