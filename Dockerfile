@@ -13,4 +13,4 @@ COPY . .
 
 EXPOSE 80
 
-CMD nodemon -L --watch . server.js
+CMD nodemon -L --watch . src/server.js
