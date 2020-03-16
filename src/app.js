@@ -69,7 +69,7 @@ app.get(
   "/auth/github/callback",
   passport.authenticate("github"),
   (req, res) => {
-    res.redirect("https://jeferson-sanchez-mern.herokuapp.com");
+    res.redirect("/");
   }
 );
 
