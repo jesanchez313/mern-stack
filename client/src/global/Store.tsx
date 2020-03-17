@@ -2,13 +2,6 @@ import React from "react";
 import { IState, IAction } from "config/interfaces";
 
 const user: any = localStorage.getItem("user");
-
-if (user === undefined) {
-  window.localStorage.removeItem("creating");
-  window.localStorage.removeItem("user");
-  window.location.href = "/";
-}
-
 const userObj: any = JSON.parse(user);
 
 const initialState: IState = {
