@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
+import { StoreProvider } from "global/Store";
+
 import App from "App";
 import * as serviceWorker from "serviceWorker";
 
@@ -9,7 +11,9 @@ import "static/styles/index.scss";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <StoreProvider>
+      <App />
+    </StoreProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );

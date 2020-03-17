@@ -1,0 +1,75 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+  padding-bottom: 2px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+}
+
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron h1 {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+.form-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px 0;
+  form {
+    width: 300px;
+  }
+}
+
+main {
+  margin: 25px 0;
+}
+
+.u-cursor-pointer {
+  cursor: pointer;
+}
+
+.img-responsive {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.btn-group-profiles {
+  height: 27px;
+}

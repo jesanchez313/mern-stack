@@ -13,13 +13,14 @@ profileController.get = async (req, res) => {
 };
 
 profileController.create = async (req, res) => {
-  const { name, description, picture } = req.body;
-  const { filename } = req.file;
+  const { name, description, username } = req.body;
+  const filename = req.file ? req.file.filename : req.body.picture;
 
   const newProfile = new ProfileModel({
     name,
     description,
-    picture: filename
+    picture: filename,
+    username: username
   });
 
   try {
@@ -32,11 +33,16 @@ profileController.create = async (req, res) => {
 };
 
 profileController.update = async (req, res) => {
+  const { name, description, username } = req.body;
+  const filename = req.file ? req.file.filename : req.body.picture;
+
   try {
-    const response = await ProfileModel.findByIdAndUpdate(
-      req.params.id,
-      req.body
-    );
+    const response = await ProfileModel.findByIdAndUpdate(req.params.id, {
+      name,
+      description,
+      picture: filename,
+      username: username
+    });
     res.status(200).json(response);
   } catch (error) {
     handleError(res, error.message, "error to update profile");

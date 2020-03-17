@@ -1,14 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Layout from "components/layouts/Layout";
+import CreateProfile from "components/Create";
 
 const Create: React.FC = () => {
   return (
-    <>
-      <h1>Crear pagina</h1>
-      <Link to="/">
-        <a>Ir a crear</a>
-      </Link>
-    </>
+    <Layout>
+      <CreateProfile></CreateProfile>
+    </Layout>
   );
 };
 
