@@ -16,6 +16,7 @@ _Fronend:_
 * typescript
 * reactstrap
 * axios hooks
+* font awesome
 * SMACSS
   
 Run project in local can you download docker and docker compose, update .env.example and fill vars
