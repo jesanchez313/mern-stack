@@ -65,6 +65,7 @@ const Menu: React.FC = () => {
           >
             {user ? (
               <img
+                className="mr-2"
                 width="25"
                 height="25"
                 src={user.photos[0].value}
