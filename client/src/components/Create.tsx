@@ -15,7 +15,7 @@ const Create: React.FC = () => {
   const [{ data, loading, error }] = useAxios("/auth/profile");
 
   useEffect(() => {
-    if (data.message === "no data") {
+    if (data && data.message === "no data") {
       window.localStorage.removeItem("creating");
       window.localStorage.removeItem("user");
       window.location.href = "/";
