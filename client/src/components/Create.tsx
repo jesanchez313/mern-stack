@@ -15,12 +15,6 @@ const Create: React.FC = () => {
   const [{ data, loading, error }] = useAxios("/auth/profile");
 
   useEffect(() => {
-    if (data && data.message === "no data") {
-      window.localStorage.removeItem("creating");
-      window.localStorage.removeItem("user");
-      window.location.href = "/";
-    }
-
     dispatch({ type: "SAVE_USER", payload: data });
     window.localStorage.setItem("user", JSON.stringify(data));
   }, [data, dispatch]);
@@ -65,7 +59,12 @@ const Create: React.FC = () => {
   };
 
   if (loading) return <Loading />;
-  if (error) return <Error />;
+  if (error) {
+    window.localStorage.removeItem("creating");
+    window.localStorage.removeItem("user");
+    window.location.href = "/";
+    return <Error />;
+  }
 
   return (
     <div className="container">
