@@ -115,7 +115,7 @@ const Profile: React.FC<IProfile> = ({
                         type="button"
                         className="btn btn-sm btn-info"
                       >
-                        Edit
+                        Edit <i className="fas fa-edit"></i>
                       </button>
                     )}
 
@@ -124,12 +124,14 @@ const Profile: React.FC<IProfile> = ({
                       type="button"
                       className="btn btn-sm btn-danger"
                     >
-                      Delete
+                      Delete <i className="fas fa-trash"></i>
                     </button>
                   </>
                 )}
               </div>
-              <small className="text-muted">{username}</small>
+              <small className="text-muted">
+                {username} <i className="fas fa-user"></i>
+              </small>
             </div>
           </form>
         </div>

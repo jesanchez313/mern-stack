@@ -27,7 +27,7 @@ const Profiles: React.FC = () => {
             </p>
             <p>
               <button onClick={handleCreate} className="btn btn-primary my-2">
-                Create profile
+                Create profile <i className="fas fa-id-badge"></i>
               </button>
             </p>
           </div>
@@ -37,7 +37,7 @@ const Profiles: React.FC = () => {
         <>
           <div className="d-flex mb-3 w-100 justify-content-center">
             <button onClick={handleCreate} className="btn btn-primary btn-lg">
-              Create Profile
+              Create Profile <i className="fas fa-id-badge"></i>
             </button>
           </div>
           <div className="row">

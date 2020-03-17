@@ -29,7 +29,7 @@ const Menu: React.FC = () => {
 
   return (
     <header>
-      <Collapse className="bg-dark" isOpen={!collapsed} navbar>
+      <Collapse className="bg-dark pt-4" isOpen={!collapsed} navbar>
         <div className="container">
           <div className="row">
             <div className="col-12">
